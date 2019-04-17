@@ -1,3 +1,66 @@
+# This is an ATS-seed app, created from scratch using CLI & npm
+
+■ Setup a default seed project or use CLI:
+
+- Install nodeJS & npm (or simply verify you already have it):
+```javascript
+  node -v
+  npm -v
+```  
+- Install the Angular CLI globally:
+```javascript
+  npm install -g @angular/cli
+  ng -v
+```
+- Create a workspace and initial application:
+```javascript
+  ng new test-app
+```
+- Serve the application:
+```javascript
+  cd test-app
+  ng serve --open
+```
+- Install Angular Material & Schematics:
+```javascript
+  npm install --save @angular/material @angular/cdk @angular/animations
+  ng add @angular/material
+  ng generate @angular/material:material-nav --name container
+```
+
+**EXTRAS**
+- Include Prettier (this can be handle by the pipeline later on):
+```javascript
+  npm install --save-dev --save-exact prettier
+```
+- Include a Service with a Component already declared:
+```javascript
+  cd test-app/src/app
+  mkdir service
+  ng g s service
+```  
+- Include a reference to empty side defined boxes
+- Include modular bootstrap 4
+```javascript
+  npm install bootstrap --save
+  open angular.json
+  "styles": [
+    "src/styles.css",
+    "node_modules/bootstrap/dist/css/bootstrap.min.css"
+  ],
+```
+  LINK:
+  https://getbootstrap.com/docs/4.0/components/alerts/
+- Include fontawesome:
+```javascript  
+<div style="text-align:center">
+  <fa-icon [icon]="faCoffee"></fa-icon>
+</div>
+```
+  LINK:
+  https://fontawesome.com/how-to-use/on-the-web/using-with/angular
+
+---
 # TestApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
