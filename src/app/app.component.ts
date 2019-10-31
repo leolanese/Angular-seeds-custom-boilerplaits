@@ -21,7 +21,7 @@ export class AppComponent {
   constructor() {}
 
   public ngOnInit() {
-   // console.log('Initial App State', this.appState.state);
+    // console.log('Initial App State', this.appState.state);
   }
 }
 

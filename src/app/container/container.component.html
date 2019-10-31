@@ -7,60 +7,27 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="!(isHandset$ | async)"
   >
-    <mat-toolbar>Menu</mat-toolbar>
+  <mat-toolbar>Menu</mat-toolbar>
+
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1 <fa-icon [icon]="faCoffee"></fa-icon></a>
-      <a mat-list-item href="#">Link 2 <fa-icon [icon]="faCloudRain"></fa-icon></a>
-      <a mat-list-item href="#">Link 3 <fa-icon [icon]="faDiceD6"></fa-icon></a>
+      <a mat-list-item href="#">
+        <a [routerLink]="'LINK1'">LINK 1</a>
+        <fa-icon [icon]="faCoffee"></fa-icon>
+      </a>
+      <a mat-list-item href="#">
+        <a [routerLink]="'LINK2'">LINK 2</a>
+        <fa-icon [icon]="faCloudRain"></fa-icon>
+      </a>
+      <a mat-list-item href="#">
+        <a [routerLink]="'LINK3'">LINK 2</a>
+        <fa-icon [icon]="faCloudRain"></fa-icon>
+      </a>
     </mat-nav-list>
+
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async"
-      >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>test-app</span>
-    </mat-toolbar>
-
-    <!-- Add Content Here -->
-      <div class="container">
-        <h2>Basic Table</h2>
-        <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
-        <table class="table">
-          <thead>
-          <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Email</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
-          </tr>
-          <tr>
-            <td>Mary</td>
-            <td>Moe</td>
-            <td>mary@example.com</td>
-          </tr>
-          <tr>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    <!-- Add Content Here -->
-
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
+
 </mat-sidenav-container>

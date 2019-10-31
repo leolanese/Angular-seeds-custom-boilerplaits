@@ -9,16 +9,15 @@ import {
   MatToolbarModule,
 } from '@angular/material';
 
-import { OneComponent } from './container.component';
-import { configureTestSuite } from 'ng-bullet';
+import { TwoComponent } from './two.component';
 
-describe('Validate OneComponent', () => {
-  let component: OneComponent;
-  let fixture: ComponentFixture<OneComponent>;
+describe('Validate TwoComponent', () => {
+  let component: TwoComponent;
+  let fixture: ComponentFixture<TwoComponent>;
 
-  configureTestSuite(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [OneComponent],
+      declarations: [TwoComponent],
       imports: [
         NoopAnimationsModule,
         LayoutModule,
@@ -28,11 +27,11 @@ describe('Validate OneComponent', () => {
         MatSidenavModule,
         MatToolbarModule,
       ]
-    });
-  });
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OneComponent);
+    fixture = TestBed.createComponent(TwoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -40,5 +39,4 @@ describe('Validate OneComponent', () => {
   it('should compile', () => {
     expect(component).toBeTruthy();
   });
-
 });

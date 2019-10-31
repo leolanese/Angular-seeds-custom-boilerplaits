@@ -9,8 +9,8 @@ import {
   MatToolbarModule,
 } from '@angular/material';
 
-import { OneComponent } from './container.component';
-import { configureTestSuite } from 'ng-bullet';
+import { OneComponent } from './one.component';
+import {configureTestSuite} from 'ng-bullet';
 
 describe('Validate OneComponent', () => {
   let component: OneComponent;
@@ -40,5 +40,4 @@ describe('Validate OneComponent', () => {
   it('should compile', () => {
     expect(component).toBeTruthy();
   });
-
 });
