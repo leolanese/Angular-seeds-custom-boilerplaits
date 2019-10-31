@@ -19,7 +19,7 @@
 - Serve the application:
 ```javascript
   cd test-app
-  ng serve --open
+  ng serve --port 4500 --open
 ```
 - Install Angular Material & Schematics:
 ```javascript
