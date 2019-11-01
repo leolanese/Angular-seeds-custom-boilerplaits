@@ -1,8 +1,10 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams } from "@angular/common/http";
 
-import { Observable, throwError } from "rxjs";
-import { catchError } from "rxjs/operators";
+import {Observable, of, throwError} from 'rxjs';
+import {catchError, map} from 'rxjs/operators';
+
+import { ApiResponse } from '../../interfaces/response.interface';
 
 @Injectable()
 export class ApiService {
@@ -14,10 +16,17 @@ export class ApiService {
     return throwError(error.error);
   }
 
-  get(path: string, params: HttpParams = new HttpParams()): Observable<any> {
+  get(path: string, params: HttpParams = new HttpParams()): Observable<ApiResponse> {
     debugger;
     return this.http
       .get(`${ApiService.API_URL}${path}`, { params })
-      .pipe(catchError(this.formatErrors));
+      .pipe(
+        map((httpResponse: ApiResponse) => {
+          return httpResponse;
+        }),
+        catchError((response: ApiResponse) => {
+          return of(response);
+        })
+      );
   }
 }

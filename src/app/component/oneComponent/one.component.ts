@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
-import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
-import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
-import { faCoffee, faCloudRain, faDiceD6 } from "@fortawesome/free-solid-svg-icons";
-import { ApiService } from "../services";
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
+import { faCoffee, faCloudRain, faDiceD6 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: "oneComponent-app",

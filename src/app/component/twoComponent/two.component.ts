@@ -4,7 +4,6 @@ import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { faCoffee, faCloudRain, faDiceD6 } from "@fortawesome/free-solid-svg-icons";
-import { ApiService } from "../services";
 
 @Component({
   selector: "componentTwo-app",

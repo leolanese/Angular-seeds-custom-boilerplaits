@@ -4,14 +4,15 @@ import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { faCoffee, faCloudRain, faDiceD6 } from "@fortawesome/free-solid-svg-icons";
-import { BridgeService } from "../services";
+
+import { PictureService, ApiService } from "../services";
 
 @Component({
   selector: "test-app",
   templateUrl: "./container.component.html",
   styleUrls: ["./container.component.css"]
 })
-export class ContainerComponent {
+export class ContainerComponent implements OnInit {
   title = "app";
   faCoffee = faCoffee;
   faCloudRain = faCloudRain;
@@ -23,8 +24,12 @@ export class ContainerComponent {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private pictureService: BridgeService
+    private pictureService: PictureService,
+    private apiService: ApiService
   ) {}
+
+  ngOnInit(): void {
+
+  }
 }
 
-// test test

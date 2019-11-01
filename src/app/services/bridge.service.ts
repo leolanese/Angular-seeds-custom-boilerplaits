@@ -7,7 +7,7 @@ import { forkJoin } from "rxjs/internal/observable/forkJoin";
 import { map } from "rxjs/operators";
 
 @Injectable()
-export class BridgeService {
+export class PictureService {
   constructor(private apiService: ApiService) {}
 
   public getImage(id: number) {

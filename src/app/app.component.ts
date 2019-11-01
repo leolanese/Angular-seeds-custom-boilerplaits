@@ -23,6 +23,10 @@ export class AppComponent {
   public ngOnInit() {
     // console.log('Initial App State', this.appState.state);
   }
+
+  upCase(st: string): void {
+    console.log('upcase');
+  }
 }
 
 

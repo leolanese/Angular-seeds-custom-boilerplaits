@@ -16,17 +16,18 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { environment } from "../environments/environment";
 import { APP_RESOLVER_PROVIDERS } from "./app.resolver";
 
-import { ApiService, BridgeService } from "./services";
+import { ApiService, PictureService } from "./services";
 
 import {HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { RouterModule, Routes, Router } from "@angular/router";
 
+
 /**
  * Application wide providers
  */
-const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS, ApiService, BridgeService];
+const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS, ApiService];
 
 /**
  * Importing Containers & Components
@@ -46,9 +47,14 @@ const routes: Routes = [
   { path: "LINK3", component: ThreeComponent }
 ];
 
+import { ButtonComponent } from './component/button/button.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
+    ContainerComponent,
+    ButtonComponent,
     ContainerComponent,
     OneComponent,
     TwoComponent,
@@ -70,7 +76,11 @@ const routes: Routes = [
     NgbModule.forRoot(),
     RouterModule.forRoot(routes, { useHash: true }),
   ],
-  providers: [environment.ENV_PROVIDERS, APP_PROVIDERS],
+  providers: [
+    environment.ENV_PROVIDERS,
+    APP_PROVIDERS,
+    PictureService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
