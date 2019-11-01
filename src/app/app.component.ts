@@ -24,9 +24,6 @@ export class AppComponent {
     // console.log('Initial App State', this.appState.state);
   }
 
-  upCase(st: string): void {
-    console.log('upcase');
-  }
 }
 
 

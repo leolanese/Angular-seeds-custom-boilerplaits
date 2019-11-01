@@ -87,7 +87,7 @@ export class AppModule {
   constructor(router: Router) {
     // Diagnostic only: inspect router configuration
     // Use a custom replacer to display function names in the route configs
-    const replacer = (key, value) => (typeof value === 'function') ? value.name : value;
-    console.warn('Routes: ', JSON.stringify(router.config, replacer, 2));
+    // const replacer = (key, value) => (typeof value === 'function') ? value.name : value;
+    // console.warn('Routes: ', JSON.stringify(router.config, replacer, 2));
   }
 }

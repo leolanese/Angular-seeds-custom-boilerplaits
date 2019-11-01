@@ -11,10 +11,16 @@
       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
+
+      <test-button (onClick)="fromChild($event)"></test-button>
+
       <span>Table</span>
     </mat-toolbar>
 
     <!-- Add Content Here -->
+    <tr *ngFor="let datas of httpData$">
+    </tr>
+
     <div class="container">
       <h2>Table</h2>
       <p>

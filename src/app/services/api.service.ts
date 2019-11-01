@@ -5,10 +5,12 @@ import {Observable, of, throwError} from 'rxjs';
 import {catchError, map} from 'rxjs/operators';
 
 import { ApiResponse } from '../../interfaces/response.interface';
+import { ApiRequest } from '../../interfaces/request.interface';
 
 @Injectable()
 export class ApiService {
-  private static readonly API_URL = "https://jsonplaceholder.typicode.com/";
+  private static readonly API_URL = 'https://jsonplaceholder.typicode.com/';
+  private static readonly PATH = 'todos';
 
   constructor(private http: HttpClient) {}
 
@@ -16,10 +18,10 @@ export class ApiService {
     return throwError(error.error);
   }
 
-  get(path: string, params: HttpParams = new HttpParams()): Observable<ApiResponse> {
+  getData(path: string, params: HttpParams = new HttpParams()): Observable<ApiResponse> {
     debugger;
     return this.http
-      .get(`${ApiService.API_URL}${path}`, { params })
+      .get<ApiRequest>(`${ApiService.API_URL}${ApiService.PATH}`, { params })
       .pipe(
         map((httpResponse: ApiResponse) => {
           return httpResponse;

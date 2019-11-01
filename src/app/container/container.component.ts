@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
-import { Observable } from "rxjs";
+import {Observable, Subscribable, Subscription} from 'rxjs';
 import { map } from "rxjs/operators";
 import { faCoffee, faCloudRain, faDiceD6 } from "@fortawesome/free-solid-svg-icons";
 
@@ -17,6 +17,7 @@ export class ContainerComponent implements OnInit {
   faCoffee = faCoffee;
   faCloudRain = faCloudRain;
   faDiceD6 = faDiceD6;
+  httpData$: any;
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
@@ -29,7 +30,12 @@ export class ContainerComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+      // TODO: pass Observable to the child one.component and parse
+      this.apiService.getData('todos').subscribe(data => {
+        this.httpData$ = data;
+        console.log(data);
+      });
+    }
 
-  }
 }
 

@@ -24,4 +24,8 @@ export class OneComponent {
   constructor(
     private breakpointObserver: BreakpointObserver
   ) {}
+
+  fromChild($event: any) {
+    console.log($event);
+  }
 }
