@@ -21,7 +21,7 @@ import { ApiService, BridgeService } from "./services";
 import {HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
-import { RouterModule, Routes } from "@angular/router";
+import { RouterModule, Routes, Router } from "@angular/router";
 
 /**
  * Application wide providers
@@ -29,10 +29,12 @@ import { RouterModule, Routes } from "@angular/router";
 const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS, ApiService, BridgeService];
 
 /**
- * Importing routes Components
+ * Importing Containers & Components
  */
 import { AppComponent } from "./app.component";
+
 import { ContainerComponent } from './container';
+
 import { OneComponent } from "./component/oneComponent";
 import { TwoComponent } from "./component/twoComponent";
 import { ThreeComponent } from "./component/ThreeComponent";
@@ -52,6 +54,7 @@ const routes: Routes = [
     TwoComponent,
     ThreeComponent
   ],
+  entryComponents: [],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -65,9 +68,16 @@ const routes: Routes = [
     MatIconModule,
     MatListModule,
     NgbModule.forRoot(),
-    RouterModule.forRoot(routes, { useHash: true })
+    RouterModule.forRoot(routes, { useHash: true }),
   ],
   providers: [environment.ENV_PROVIDERS, APP_PROVIDERS],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  constructor(router: Router) {
+    // Diagnostic only: inspect router configuration
+    // Use a custom replacer to display function names in the route configs
+    const replacer = (key, value) => (typeof value === 'function') ? value.name : value;
+    console.warn('Routes: ', JSON.stringify(router.config, replacer, 2));
+  }
+}
