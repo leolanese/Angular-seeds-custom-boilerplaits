@@ -1,2 +1,2 @@
 export * from "./api.service";
-export * from "./some.service";
+export * from "./bridge.service";

@@ -9,24 +9,25 @@
   >
   <mat-toolbar>Menu</mat-toolbar>
 
-    <mat-nav-list>
-      <a mat-list-item href="#">
-        <a [routerLink]="'LINK1'">LINK 1</a>
-        <fa-icon [icon]="faCoffee"></fa-icon>
-      </a>
-      <a mat-list-item href="#">
-        <a [routerLink]="'LINK2'">LINK 2</a>
-        <fa-icon [icon]="faCloudRain"></fa-icon>
-      </a>
-      <a mat-list-item href="#">
-        <a [routerLink]="'LINK3'">LINK 2</a>
-        <fa-icon [icon]="faCloudRain"></fa-icon>
-      </a>
-    </mat-nav-list>
+  <mat-nav-list>
+    <a mat-list-item href="#">
+      <a [routerLink]="'LINK1'">LINK 1</a>
+      <fa-icon [icon]="faCoffee"></fa-icon>
+    </a>
+    <a mat-list-item href="#">
+      <a [routerLink]="'LINK2'">LINK 2</a>
+      <fa-icon [icon]="faCloudRain"></fa-icon>
+    </a>
+    <a mat-list-item href="#">
+      <a [routerLink]="'LINK3'">LINK 2</a>
+      <fa-icon [icon]="faCloudRain"></fa-icon>
+    </a>
+  </mat-nav-list>
 
   </mat-sidenav>
 
   <mat-sidenav-content>
+    <!-- router content -->
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 

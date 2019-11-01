@@ -9,16 +9,23 @@ import {
   MatToolbarModule,
 } from '@angular/material';
 
-import { OneComponent } from './container.component';
+import { OneComponent } from './../component/oneComponent';
+import { TwoComponent } from './../component/twoComponent';
+import { ThreeComponent } from './../component/threeComponent';
+
 import { configureTestSuite } from 'ng-bullet';
 
-describe('Validate OneComponent', () => {
+describe('Validate Container', () => {
   let component: OneComponent;
   let fixture: ComponentFixture<OneComponent>;
 
   configureTestSuite(() => {
     TestBed.configureTestingModule({
-      declarations: [OneComponent],
+      declarations: [
+        OneComponent,
+        TwoComponent,
+        ThreeComponent
+      ],
       imports: [
         NoopAnimationsModule,
         LayoutModule,

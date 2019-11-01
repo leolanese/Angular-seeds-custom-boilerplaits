@@ -15,7 +15,7 @@ export class ApiService {
   }
 
   get(path: string, params: HttpParams = new HttpParams()): Observable<any> {
-    debugger
+    debugger;
     return this.http
       .get(`${ApiService.API_URL}${path}`, { params })
       .pipe(catchError(this.formatErrors));

@@ -4,7 +4,7 @@ import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { faCoffee, faCloudRain, faDiceD6 } from "@fortawesome/free-solid-svg-icons";
-import { SomeService } from "../services";
+import { BridgeService } from "../services";
 
 @Component({
   selector: "test-app",
@@ -23,6 +23,6 @@ export class ContainerComponent {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private pictureService: SomeService
+    private pictureService: BridgeService
   ) {}
 }

@@ -1,17 +1,20 @@
 import { Injectable } from "@angular/core";
+
 import { ApiService } from "./api.service";
+
 import { forkJoin } from "rxjs/internal/observable/forkJoin";
+
 import { map } from "rxjs/operators";
 
 @Injectable()
-export class SomeService {
+export class BridgeService {
   constructor(private apiService: ApiService) {}
 
-  public getPhoto(id: number) {
+  public getImage(id: number) {
     return this.apiService.get(`photos/${id}`).pipe(map(data => data));
   }
 
-  public getPhotoAndThumbnails(id: number, nextId: number, previousId: number) {
+  public getImageAndThumbnails(id: number, nextId: number, previousId: number) {
     debugger
     const currentPhoto = this.apiService.get(`photos/${id}`);
     const nextPhoto = this.apiService.get(`photos/${nextId}`);

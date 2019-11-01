@@ -16,7 +16,7 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { environment } from "../environments/environment";
 import { APP_RESOLVER_PROVIDERS } from "./app.resolver";
 
-import { ApiService, SomeService } from "./services";
+import { ApiService, BridgeService } from "./services";
 
 import {HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -26,7 +26,7 @@ import { RouterModule, Routes } from "@angular/router";
 /**
  * Application wide providers
  */
-const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS, ApiService, SomeService];
+const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS, ApiService, BridgeService];
 
 /**
  * Importing routes Components
