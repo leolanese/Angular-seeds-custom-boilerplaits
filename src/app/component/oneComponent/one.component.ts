@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import {Observable, of} from 'rxjs';
-import {delay, map} from 'rxjs/operators';
+import {delay, map, tap} from 'rxjs/operators';
 
 import { faCoffee, faCloudRain, faDiceD6 } from '@fortawesome/free-solid-svg-icons';
 import {ApiService} from '../../services';
@@ -31,6 +31,15 @@ export class OneComponent {
   fromChild($event: any) {
     console.log($event);
     this.fetchData();
+  }
+
+  getUpperCase(name: string): Observable<string> {
+    console.log('getUpperCaseName', name);
+    return of(name).pipe(
+      // delay(2000),
+      map((str: string) => str.toUpperCase()),
+      tap((str: string) => console.log('uppercase:', str))
+    );
   }
 
   private fetchData() {

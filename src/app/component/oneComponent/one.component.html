@@ -22,7 +22,7 @@
     <p *ngFor="let user of httpData$ | async as httpData$; index as i">
       {{ user.userId }}
       {{ user.id }}
-      {{ user.title }}
+      {{ user.title }}{{getUpperCase(user.title) | async}}
       {{ user.completed }}
       {{ user.userId }} ({{ i + 1 }} / {{ httpData$.length }})
     </p>
