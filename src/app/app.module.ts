@@ -8,8 +8,8 @@ import {
   MatButtonModule,
   MatSidenavModule,
   MatIconModule,
-  MatListModule
-} from "@angular/material";
+  MatListModule, MatTableModule
+} from '@angular/material';
 
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
@@ -76,7 +76,8 @@ import { ThumbnailComponent } from './component/thumbnail';
     MatIconModule,
     MatListModule,
     NgbModule.forRoot(),
-    RouterModule.forRoot(routes, { useHash: true }),
+    RouterModule.forRoot(routes, {useHash: true}),
+    MatTableModule,
   ],
   providers: [
     environment.ENV_PROVIDERS,
