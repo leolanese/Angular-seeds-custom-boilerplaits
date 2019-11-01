@@ -1,0 +1,7 @@
+.thumbnail {
+  vertical-align: middle;
+  margin: 12px;
+  width: 150px;
+  height: 150px;
+  border: dimgrey 5px solid;
+}

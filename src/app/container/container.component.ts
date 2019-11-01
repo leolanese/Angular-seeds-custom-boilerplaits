@@ -17,7 +17,7 @@ export class ContainerComponent implements OnInit {
   faCoffee = faCoffee;
   faCloudRain = faCloudRain;
   faDiceD6 = faDiceD6;
-  httpData$: any;
+
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
@@ -25,16 +25,11 @@ export class ContainerComponent implements OnInit {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private pictureService: PictureService,
-    private apiService: ApiService
+    private pictureService: PictureService
   ) {}
 
   ngOnInit(): void {
-      // TODO: pass Observable to the child one.component and parse
-      this.apiService.getData('todos').subscribe(data => {
-        this.httpData$ = data;
-        console.log(data);
-      });
+
     }
 
 }

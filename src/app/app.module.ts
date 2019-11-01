@@ -48,6 +48,7 @@ const routes: Routes = [
 ];
 
 import { ButtonComponent } from './component/button/button.component';
+import { ThumbnailComponent } from './component/thumbnail';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { ButtonComponent } from './component/button/button.component';
     ContainerComponent,
     OneComponent,
     TwoComponent,
-    ThreeComponent
+    ThreeComponent,
+    ThumbnailComponent,
   ],
   entryComponents: [],
   imports: [

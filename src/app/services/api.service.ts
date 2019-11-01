@@ -10,18 +10,20 @@ import { ApiRequest } from '../../interfaces/request.interface';
 @Injectable()
 export class ApiService {
   private static readonly API_URL = 'https://jsonplaceholder.typicode.com/';
-  private static readonly PATH = 'todos';
+  private static readonly PATH_all = 'todos';
+  private static readonly PATH_users = 'users';
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient
+  ) {}
 
   private formatErrors(error: any) {
     return throwError(error.error);
   }
 
   getData(path: string, params: HttpParams = new HttpParams()): Observable<ApiResponse> {
-    debugger;
     return this.http
-      .get<ApiRequest>(`${ApiService.API_URL}${ApiService.PATH}`, { params })
+      .get<ApiRequest>(`${ApiService.API_URL}${path}`, { params })
       .pipe(
         map((httpResponse: ApiResponse) => {
           return httpResponse;
