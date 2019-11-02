@@ -17,6 +17,7 @@ export class ThreeComponent {
   faCloudRain = faCloudRain;
   faDiceD6 = faDiceD6;
   showDialog: boolean;
+  valueLabelButton = 'Close';
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
@@ -25,4 +26,8 @@ export class ThreeComponent {
   constructor(
     private breakpointObserver: BreakpointObserver
   ) {}
+
+  fromChild(e: Event) {
+    this.showDialog = !this.showDialog;
+  }
 }
