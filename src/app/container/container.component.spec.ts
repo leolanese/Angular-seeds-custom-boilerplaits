@@ -9,9 +9,9 @@ import {
   MatToolbarModule,
 } from '@angular/material';
 
-import { OneComponent } from './../component/oneComponent';
-import { TwoComponent } from './../component/twoComponent';
-import { ThreeComponent } from './../component/threeComponent';
+import { OneComponent } from './../component/oneComponent/one.component';
+import { TwoComponent } from './../component/twoComponent/two.component';
+import { ThreeComponent } from './../component/threeComponent/three.component';
 
 import { configureTestSuite } from 'ng-bullet';
 

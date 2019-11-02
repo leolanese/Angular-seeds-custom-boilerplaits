@@ -10,7 +10,7 @@ import {
 } from '@angular/material';
 
 import { OneComponent } from './one.component';
-import {configureTestSuite} from 'ng-bullet';
+import { configureTestSuite } from 'ng-bullet';
 
 describe('Validate OneComponent', () => {
   let component: OneComponent;

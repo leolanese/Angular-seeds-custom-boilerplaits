@@ -1,2 +1,2 @@
-export * from "./api.service";
-export * from "./bridge.service";
+export { ApiService } from "./api.service";
+export { PictureService } from "./picture.service";

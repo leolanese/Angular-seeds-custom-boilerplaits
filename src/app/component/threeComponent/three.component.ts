@@ -16,6 +16,7 @@ export class ThreeComponent {
   faCoffee = faCoffee;
   faCloudRain = faCloudRain;
   faDiceD6 = faDiceD6;
+  showDialog: boolean;
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)

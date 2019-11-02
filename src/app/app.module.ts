@@ -36,9 +36,9 @@ import { AppComponent } from "./app.component";
 
 import { ContainerComponent } from './container';
 
-import { OneComponent } from "./component/oneComponent";
-import { TwoComponent } from "./component/twoComponent";
-import { ThreeComponent } from "./component/ThreeComponent";
+import { OneComponent } from "./component/oneComponent/one.component";
+import { TwoComponent } from "./component/twoComponent/two.component";
+import { ThreeComponent } from "./component/threeComponent/three.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/LINK1", pathMatch: "full" },
@@ -48,7 +48,8 @@ const routes: Routes = [
 ];
 
 import { ButtonComponent } from './component/button/button.component';
-import { ThumbnailComponent } from './component/thumbnail';
+import { ThumbnailComponent } from './component/thumbnail/thumbnail.component';
+import { DialogComponent } from './component/modal/dialog/dialog.component';
 
 
 @NgModule({
@@ -61,6 +62,7 @@ import { ThumbnailComponent } from './component/thumbnail';
     TwoComponent,
     ThreeComponent,
     ThumbnailComponent,
+    DialogComponent
   ],
   entryComponents: [],
   imports: [
