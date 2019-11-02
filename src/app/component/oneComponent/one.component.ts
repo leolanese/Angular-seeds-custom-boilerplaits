@@ -5,7 +5,7 @@ import { Observable, of } from 'rxjs';
 import { delay, map, tap } from 'rxjs/operators';
 
 import { faCoffee, faCloudRain, faDiceD6 } from '@fortawesome/free-solid-svg-icons';
-import { ApiService } from '../../services';
+import { ApiService, PictureService } from '../../services';
 
 @Component({
   selector: "oneComponent-app",
@@ -26,6 +26,7 @@ export class OneComponent implements OnInit {
   constructor(
     private breakpointObserver: BreakpointObserver,
     private apiService: ApiService,
+    private pictureService: PictureService
   ) {}
 
   fromChild($event: any) {

@@ -11,7 +11,9 @@ export class PictureService {
   constructor(private apiService: ApiService) {}
 
   public getImage(id: number) {
-    return this.apiService.getData(`photos/${id}`).pipe(map(data => data));
+    return this.apiService.getData(`photos/${id}`).pipe(
+      map(data => data)
+    );
   }
 
   public getImageAndThumbnails(id: number, nextId: number, previousId: number) {
