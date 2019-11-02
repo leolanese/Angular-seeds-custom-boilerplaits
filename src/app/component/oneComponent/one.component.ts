@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import {Observable, of} from 'rxjs';
-import {delay, map, tap} from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { delay, map, tap } from 'rxjs/operators';
 
 import { faCoffee, faCloudRain, faDiceD6 } from '@fortawesome/free-solid-svg-icons';
-import {ApiService} from '../../services';
+import { ApiService } from '../../services';
 
 @Component({
   selector: "oneComponent-app",
   templateUrl: "./one.component.html",
   styleUrls: ["./one.component.css"]
 })
-export class OneComponent {
+export class OneComponent implements OnInit {
   title = "app";
   faCoffee = faCoffee;
   faCloudRain = faCloudRain;
@@ -29,7 +29,10 @@ export class OneComponent {
   ) {}
 
   fromChild($event: any) {
-    console.log($event);
+    this.fetchData();
+  }
+
+  ngOnInit(): void {
     this.fetchData();
   }
 
