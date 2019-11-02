@@ -5,7 +5,7 @@ import {Observable, Subscribable, Subscription} from 'rxjs';
 import { map } from "rxjs/operators";
 import { faCoffee, faCloudRain, faDiceD6 } from "@fortawesome/free-solid-svg-icons";
 
-import { PictureService, ApiService } from "../services";
+import { PictureService, ApiService, ApiCarService } from "../services";
 
 @Component({
   selector: "test-app",

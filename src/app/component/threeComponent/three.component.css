@@ -15,3 +15,33 @@
   top: 0;
   z-index: 1;
 }
+
+/* grid */
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -10px;
+  margin-bottom: 10px;
+}
+.row:last-child {
+  margin-bottom: 0;
+}
+[class*="col-"] {
+  padding: 10px;
+  width: 100%;
+}
+
+@media all and ( min-width: 700px ) {
+
+  /* set col widths */
+  .col-1-4 {
+    width: 25%;
+    border: solid;
+  }
+
+}
+
+.car-image {
+    width: 50%;
+    margin: auto;
+}
