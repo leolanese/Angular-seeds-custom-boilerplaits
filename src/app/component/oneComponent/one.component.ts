@@ -45,6 +45,10 @@ export class OneComponent implements OnInit {
     );
   }
 
+  public trackByData(index, user) {
+    return !user ? null : user.userId;
+  }
+
   private fetchData() {
     this.httpData$ = this.apiService.getData('todos');
 

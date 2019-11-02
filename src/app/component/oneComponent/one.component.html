@@ -17,14 +17,27 @@
     </mat-toolbar>
 
     <!-- Add Content Here -->
-
-    <p *ngFor="let user of httpData$ | async as httpData$; index as i">
-      {{ user.userId }}
-      {{ user.id }}
-      {{ user.title }}{{getUpperCase(user.title) | async}}
-      {{ user.completed }}
-      {{ user.userId }} ({{ i + 1 }} / {{ httpData$.length }})
-    </p>
+    <table>
+      <thead>
+      <tr>
+        <th>Payment</th>
+        <th>Issue Date</th>
+        <th>Amount</th>
+        <th>Index</th>
+        <th>Number</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of httpData$ | async as httpData$; index as i; trackBy: trackByData">
+        <td data-label="userId">{{ user.userId }}</td>
+        <td data-label="ID">{{ user.id }}</td>
+        <td data-label="Title">{{ user.title }}</td>
+        <td data-label="Title">{{ i }}</td>
+        <td data-label="Index">({{ i + 1 }} / {{ httpData$.length }})</td>
+      </tr>
+      </tbody>
+    </table>
+    <!-- Add Content Here -->
 
   </mat-sidenav-content>
 </mat-sidenav-container>
