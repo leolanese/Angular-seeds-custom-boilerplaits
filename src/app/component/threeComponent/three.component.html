@@ -9,48 +9,42 @@
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async"
       >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon aria-label="Side nav toggle icon">Menu</mat-icon>
       </button>
       <span>Carousel</span>
     </mat-toolbar>
 
-    <!-- Add Content Here -->
-    <button (click)="showDialog = !showDialog" class="btn">Open</button>
-
     <!-- gallery content -->
-    <div >
-
-    </div>
-
-
     <div class="wrapper">
 
-      <div class="row">
+      <div class="row" *ngIf="httpDataCars$ | async as cars">
 
-        <div class="col-1-4" *ngFor="let user of httpData$ | async as httpData$; index as i;">
-          <img class="car-image" [src]="user.img_url" /><br />
+        <div class="col-1-4" *ngFor="let car of cars; index as i;">
+          <img class="car-image" [src]="car.img_url" /><br />
           <span data-label="userId"></span><br />
-          <span data-label="userMaker">{{ user.make }}</span><br />
-          <span data-label="userId">{{ user.model }}</span><br />
+          <span data-label="userMaker">{{ car.make }}</span><br />
+          <span data-label="userId">{{ car.model }}</span><br />
           <test-button
             (onClick)="onClickCar($event, i)"
-            [valueLabelButton]="valueLabelButton">
+            [valueLabelButton]="valueLabelButton"
+            (click)="showDialog = !showDialog">
           </test-button>
         </div>
-
-      </div><!-- /.row -->
-
-    </div><!-- /.wrapper -->
+      </div>
+    </div>
     <!--  gallery content -->
 
     <app-dialog [(visible)]="showDialog">
 
       <!-- Modal content -->
       <h1>Modal View</h1>
-      <test-button
-        (onClick)="fromChild($event)"
-        [valueLabelButton]="valueLabelButton"
-      >Closec</test-button>
+      <div *ngIf="httpDataCar$ | async as cars">
+        <img class="car-image" [src]="cars.img_url" /><br />
+        <span data-label="userId"></span><br />
+        <span data-label="userMaker">Information: {{ cars.make }}, {{ cars.model }}</span><br />
+        <span data-label="userMaker">Carwow raiting: {{ cars.carwow_rating }}</span><br />
+        <span data-label="userId">Summary: {{ cars.summary }}</span><br />
+      </div>
       <!-- Modal content -->
 
     </app-dialog>

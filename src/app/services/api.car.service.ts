@@ -9,7 +9,8 @@ import { ApiRequest } from '../../interfaces/request.interface';
 
 @Injectable()
 export class ApiCarService {
-  private static readonly API_URL = 'https://warm-dawn-92320.herokuapp.com/models/';
+  private static readonly API_URL_CARS = 'https://warm-dawn-92320.herokuapp.com/models/';
+  private static readonly API_URL_CAR = 'https://warm-dawn-92320.herokuapp.com/model/';
 
   constructor(
     private http: HttpClient
@@ -19,9 +20,22 @@ export class ApiCarService {
     return throwError(error.error);
   }
 
-  getData(path: string, params: HttpParams = new HttpParams()): Observable<ApiResponse> {
+  getDataCars(): Observable<ApiResponse> {
     return this.http
-      .get<ApiRequest>(`${ApiCarService.API_URL}`)
+      .get<ApiRequest>(`${ApiCarService.API_URL_CARS}`)
+      .pipe(
+        map((httpResponse: ApiResponse) => {
+          return httpResponse;
+        }),
+        catchError((response: ApiResponse) => {
+          return of(response);
+        })
+      );
+  }
+
+  getDataCar(path: string): Observable<ApiResponse> {
+    return this.http
+      .get<ApiRequest>(`${ApiCarService.API_URL_CAR}${path}`)
       .pipe(
         map((httpResponse: ApiResponse) => {
           return httpResponse;

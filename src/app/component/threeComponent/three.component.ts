@@ -5,6 +5,7 @@ import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { faCoffee, faCloudRain, faDiceD6 } from "@fortawesome/free-solid-svg-icons";
 import {ApiCarService} from '../../services/api.car.service';
+import {ApiResponse} from '../../../interfaces/response.interface';
 
 @Component({
   selector: "componentThree-app",
@@ -22,7 +23,8 @@ export class ThreeComponent implements OnInit {
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(map(result => result.matches));
-  private httpData$: any;
+  private httpDataCars$: Observable<ApiResponse>;
+  private httpDataCar$: Observable<ApiResponse>;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -38,11 +40,12 @@ export class ThreeComponent implements OnInit {
   }
 
   fetchData () {
-    this.httpData$ = this.apiCarService.getData('');
+    this.httpDataCars$ = this.apiCarService.getDataCars();
   }
 
   onClickCar(event, i) {
-    alert(i);
+    console.log(i);
+    this.httpDataCar$ = this.apiCarService.getDataCar(i);
   }
 
 }
