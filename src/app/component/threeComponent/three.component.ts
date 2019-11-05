@@ -23,8 +23,8 @@ export class ThreeComponent implements OnInit {
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(map(result => result.matches));
-  private httpDataCars$: Observable<ApiResponse>;
-  private httpDataCar$: Observable<ApiResponse>;
+  public httpDataCars$: Observable<ApiResponse>;
+  public httpDataCar$: Observable<ApiResponse>;
 
   constructor(
     private breakpointObserver: BreakpointObserver,

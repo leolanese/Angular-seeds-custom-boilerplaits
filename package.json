@@ -19,7 +19,7 @@
     "deploy-storybook": "rimraf ./storybook-static && build-storybook",
     "prettier": "prettier --write --list-different **/*.ts",
     "tslint": "tslint --config ./tslint.json '**/*.ts' -e 'node_modules/**' -e '**/*.spec.ts' -e '**/*.d.ts' -e '**/polyfills.ts' ",
-    "prepush-technique": "clear && npm audit fix --only=prod && npm run test:coverage:headless && npm run build:angular",
+    "prepush-technique": "npm audit fix --only=prod && npm run test:headless && ng build --prod \"",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
   "husky": {
