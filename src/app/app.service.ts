@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
 export interface InternalStateType {
   [key: string]: any;
@@ -19,7 +19,7 @@ export class AppState {
    * Never allow mutation
    */
   public set state(value) {
-    throw new Error("do not mutate the `.state` directly");
+    throw new Error('do not mutate the `.state` directly');
   }
 
   public get(prop?: any) {

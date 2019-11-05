@@ -91,21 +91,15 @@ type FactoryEs6PromiseLoader = () => Es6PromiseLoader;
 type FactoryPromise = () => Promise<any>;
 
 type AsyncRoutes = {
-  [component: string]: Es6PromiseLoader |
-    Function |
-    FactoryEs6PromiseLoader |
-    FactoryPromise ;
+  [component: string]: Es6PromiseLoader | Function | FactoryEs6PromiseLoader | FactoryPromise;
 };
 
-type IdleCallbacks = Es6PromiseLoader |
-  Function |
-  FactoryEs6PromiseLoader |
-  FactoryPromise ;
+type IdleCallbacks = Es6PromiseLoader | Function | FactoryEs6PromiseLoader | FactoryPromise;
 
 interface WebpackModule {
   hot: {
-    data?: any,
-    idle: any,
+    data?: any;
+    idle: any;
     accept(dependencies?: string | string[], callback?: (updatedDependencies?: any) => void): void;
     decline(deps?: any | string | string[]): void;
     dispose(callback?: (data?: any) => void): void;
@@ -136,6 +130,6 @@ interface ErrorStackTraceLimit {
 // Extend typings
 interface NodeRequire extends WebpackRequire {}
 interface ErrorConstructor extends ErrorStackTraceLimit {}
-interface NodeRequireFunction extends Es6PromiseLoader  {}
+interface NodeRequireFunction extends Es6PromiseLoader {}
 interface NodeModule extends WebpackModule {}
-interface Global extends GlobalEnvironment  {}
+interface Global extends GlobalEnvironment {}

@@ -7,16 +7,16 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { TwoComponent } from './two.component';
+import { ThumbnailComponent } from './thumbnail.component';
 import { configureTestSuite } from 'ng-bullet';
 
 describe('Validate TwoComponent', () => {
-  let component: TwoComponent;
-  let fixture: ComponentFixture<TwoComponent>;
+  let component: ThumbnailComponent;
+  let fixture: ComponentFixture<ThumbnailComponent>;
 
   configureTestSuite(() => {
     TestBed.configureTestingModule({
-      declarations: [TwoComponent],
+      declarations: [ThumbnailComponent],
       imports: [
         NoopAnimationsModule,
         LayoutModule,
@@ -30,7 +30,7 @@ describe('Validate TwoComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TwoComponent);
+    fixture = TestBed.createComponent(ThumbnailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

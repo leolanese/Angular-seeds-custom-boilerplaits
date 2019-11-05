@@ -1,19 +1,19 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
-import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
-import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
-import { faCoffee, faCloudRain, faDiceD6 } from "@fortawesome/free-solid-svg-icons";
-import {ApiCarService} from '../../services/api.car.service';
-import {ApiResponse} from '../../../interfaces/response.interface';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { faCoffee, faCloudRain, faDiceD6 } from '@fortawesome/free-solid-svg-icons';
+import { ApiCarService } from '../../services/api.car.service';
+import { ApiResponse } from '../../../interfaces/response.interface';
 
 @Component({
-  selector: "componentThree-app",
-  templateUrl: "./three.component.html",
-  styleUrls: ["./three.component.css"]
+  selector: 'componentThree-app',
+  templateUrl: './three.component.html',
+  styleUrls: ['./three.component.css']
 })
 export class ThreeComponent implements OnInit {
-  title = "app";
+  title = 'app';
   faCoffee = faCoffee;
   faCloudRain = faCloudRain;
   faDiceD6 = faDiceD6;
@@ -28,7 +28,7 @@ export class ThreeComponent implements OnInit {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private apiCarService: ApiCarService,
+    private apiCarService: ApiCarService
   ) {}
 
   ngOnInit(): void {
@@ -39,7 +39,7 @@ export class ThreeComponent implements OnInit {
     this.showDialog = !this.showDialog;
   }
 
-  fetchData () {
+  fetchData() {
     this.httpDataCars$ = this.apiCarService.getDataCars();
   }
 
@@ -47,5 +47,4 @@ export class ThreeComponent implements OnInit {
     console.log(i);
     this.httpDataCar$ = this.apiCarService.getDataCar(i);
   }
-
 }

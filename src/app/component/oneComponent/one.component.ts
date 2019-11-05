@@ -8,12 +8,12 @@ import { faCoffee, faCloudRain, faDiceD6 } from '@fortawesome/free-solid-svg-ico
 import { ApiService, PictureService } from '../../services';
 
 @Component({
-  selector: "oneComponent-app",
-  templateUrl: "./one.component.html",
-  styleUrls: ["./one.component.css"]
+  selector: 'oneComponent-app',
+  templateUrl: './one.component.html',
+  styleUrls: ['./one.component.css']
 })
 export class OneComponent implements OnInit {
-  title = "app";
+  title = 'app';
   faCoffee = faCoffee;
   faCloudRain = faCloudRain;
   faDiceD6 = faDiceD6;
