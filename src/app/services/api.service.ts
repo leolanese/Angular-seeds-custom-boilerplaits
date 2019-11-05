@@ -25,7 +25,7 @@ export class ApiService {
     return this.http
       .get<ApiRequest>(`${ApiService.API_URL}${path}`, { params })
       .pipe(
-        map((httpResponse: ApiResponse) => {
+        map((httpResponse: any) => {
           return httpResponse;
         }),
         catchError((response: ApiResponse) => {

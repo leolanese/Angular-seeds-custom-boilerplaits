@@ -76,7 +76,6 @@ import { DialogComponent } from './component/modal/dialog/dialog.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    NgbModule.forRoot(),
     RouterModule.forRoot(routes, {useHash: true}),
     MatTableModule,
   ],
