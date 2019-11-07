@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable, of } from 'rxjs';
@@ -10,7 +10,8 @@ import { ApiService, PictureService } from '../../services';
 @Component({
   selector: 'oneComponent-app',
   templateUrl: './one.component.html',
-  styleUrls: ['./one.component.css']
+  styleUrls: ['./one.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OneComponent implements OnInit {
   title = 'app';

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
@@ -8,7 +8,8 @@ import { faCoffee, faCloudRain, faDiceD6 } from '@fortawesome/free-solid-svg-ico
 @Component({
   selector: 'componentTwo-app',
   templateUrl: './two.component.html',
-  styleUrls: ['./two.component.css']
+  styleUrls: ['./two.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TwoComponent {
   title = 'app';

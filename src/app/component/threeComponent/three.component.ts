@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
@@ -10,7 +10,8 @@ import { ApiResponse } from '../../../interfaces/response.interface';
 @Component({
   selector: 'componentThree-app',
   templateUrl: './three.component.html',
-  styleUrls: ['./three.component.css']
+  styleUrls: ['./three.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThreeComponent implements OnInit {
   title = 'app';

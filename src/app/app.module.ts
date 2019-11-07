@@ -48,6 +48,8 @@ const routes: Routes = [
 import { ButtonComponent } from './component/button/button.component';
 import { ThumbnailComponent } from './component/thumbnail/thumbnail.component';
 import { DialogComponent } from './component/modal/dialog/dialog.component';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {StoreRouterConnectingModule} from '@ngrx/router-store';
 
 @NgModule({
   declarations: [
@@ -75,7 +77,26 @@ import { DialogComponent } from './component/modal/dialog/dialog.component';
     MatIconModule,
     MatListModule,
     RouterModule.forRoot(routes, { useHash: true }),
-    MatTableModule
+    MatTableModule,
+    StoreRouterConnectingModule.forRoot(),
+    StoreDevtoolsModule.instrument({
+      name: 'Leo Lanese - @ngrx Book Store DevTools',
+      maxAge: 25,
+      logOnly: true,
+      features: {
+        trace: true,
+        pause: true, // start/pause recording of dispatched actions
+        lock: true, // lock/unlock dispatching actions and side effects
+        persist: true, // persist states on page reloading
+        export: true, // export history of actions in a file
+        import: true, // import history of actions from a file
+        jump: true, // jump back and forth (time travelling)
+        skip: true, // skip (cancel) actions
+        reorder: true, // drag and drop actions in the history list
+        dispatch: true, // dispatch custom actions or action creators
+        test: true // generate testmos for the selected actions
+      },
+    })
   ],
   providers: [environment.ENV_PROVIDERS, APP_PROVIDERS, PictureService],
   bootstrap: [AppComponent]
