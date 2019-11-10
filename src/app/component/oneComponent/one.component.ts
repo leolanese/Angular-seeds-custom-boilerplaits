@@ -4,7 +4,6 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable, of } from 'rxjs';
 import { delay, map, tap } from 'rxjs/operators';
 
-import { faCoffee, faCloudRain, faDiceD6 } from '@fortawesome/free-solid-svg-icons';
 import { ApiService, PictureService } from '../../services';
 
 @Component({
@@ -15,9 +14,6 @@ import { ApiService, PictureService } from '../../services';
 })
 export class OneComponent implements OnInit {
   title = 'app';
-  faCoffee = faCoffee;
-  faCloudRain = faCloudRain;
-  faDiceD6 = faDiceD6;
   httpData$: any;
 
   isHandset$: Observable<boolean> = this.breakpointObserver

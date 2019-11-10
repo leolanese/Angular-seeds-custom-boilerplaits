@@ -18,7 +18,6 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { ApiService, PictureService, ApiCarService } from './services';
 
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { RouterModule, Routes, Router } from '@angular/router';
 
@@ -37,12 +36,14 @@ import { ContainerComponent } from './container';
 import { OneComponent } from './component/oneComponent/one.component';
 import { TwoComponent } from './component/twoComponent/two.component';
 import { ThreeComponent } from './component/threeComponent/three.component';
+import { FourComponent } from './component/fourComponent/four.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/LINK1', pathMatch: 'full' },
   { path: 'LINK1', component: OneComponent },
   { path: 'LINK2', component: TwoComponent },
-  { path: 'LINK3', component: ThreeComponent }
+  { path: 'LINK3', component: ThreeComponent },
+  { path: 'LINK4', component: FourComponent }
 ];
 
 import { ButtonComponent } from './component/button/button.component';
@@ -50,7 +51,7 @@ import { ThumbnailComponent } from './component/thumbnail/thumbnail.component';
 import { DialogComponent } from './component/modal/dialog/dialog.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
-import {StoreModule} from '@ngrx/store';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import {StoreModule} from '@ngrx/store';
     OneComponent,
     TwoComponent,
     ThreeComponent,
+    FourComponent,
     ThumbnailComponent,
     DialogComponent
   ],

@@ -3,7 +3,6 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { faCoffee, faCloudRain, faDiceD6 } from '@fortawesome/free-solid-svg-icons';
 import { ApiCarService } from '../../services/api.car.service';
 import { ApiResponse } from '../../../interfaces/response.interface';
 
@@ -14,10 +13,6 @@ import { ApiResponse } from '../../../interfaces/response.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThreeComponent implements OnInit {
-  title = 'app';
-  faCoffee = faCoffee;
-  faCloudRain = faCloudRain;
-  faDiceD6 = faDiceD6;
   showDialog: boolean;
   valueLabelButton = 'View';
 
