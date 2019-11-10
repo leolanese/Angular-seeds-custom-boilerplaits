@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4600",
-    "start:development": "node --max-old-space-size=8192 node_modules/@angular/cli/bin/ng serve --configuration development",
+    "start:development": "node --max-old-space-size=8192 node_modules/@angular/cli/bin/ng serve --c development",
     "build": "ng build",
     "lint": "ng lint",
     "e2e": "ng e2e",

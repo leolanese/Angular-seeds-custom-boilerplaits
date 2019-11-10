@@ -48,8 +48,9 @@ const routes: Routes = [
 import { ButtonComponent } from './component/button/button.component';
 import { ThumbnailComponent } from './component/thumbnail/thumbnail.component';
 import { DialogComponent } from './component/modal/dialog/dialog.component';
-import {StoreDevtoolsModule} from '@ngrx/store-devtools';
-import {StoreRouterConnectingModule} from '@ngrx/router-store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import {StoreModule} from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import {StoreRouterConnectingModule} from '@ngrx/router-store';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    StoreModule.forRoot({}, {  }),
     RouterModule.forRoot(routes, { useHash: true }),
     MatTableModule,
     StoreRouterConnectingModule.forRoot(),
