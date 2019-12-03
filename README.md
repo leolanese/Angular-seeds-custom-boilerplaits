@@ -1,4 +1,5 @@
-# This is an Angular8 Seed App: ATS-seed app, created from scratch using CLI & npm
+# Angular8 Seed App: 
+This is a reusable ATS-seed app, created from scratch using CLI & npm
 
 ■ Setup a default seed project or use CLI:
 
@@ -61,6 +62,7 @@
   https://fontawesome.com/how-to-use/on-the-web/using-with/angular
 
 ---
+
 # TestApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
