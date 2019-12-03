@@ -1,4 +1,15 @@
 # Angular8 Seed App: 
+
+This is an altenative ngrx8 with Angular8 seed. Other seed contain some extra dependencies already install in the project to help to save some valuable development time.
+
+#### Please have a look at the other seeds (just in case):
+- ngrx8-seed: https://github.com/leolanese/ngrx8-seed
+- ATS-seed(you are here): https://github.com/leolanese/ATS-seed
+- ngrx8-angular8-seed: https://github.com/leolanese/ngrx8-angular8-seed
+- Angular8-seed: https://github.com/leolanese/ngrx8-seed
+
+---
+
 This is a reusable ATS-seed app, created from scratch using CLI & npm
 
 ■ Setup a default seed project or use CLI:
