@@ -1,4 +1,4 @@
-# This is an ATS-seed app, created from scratch using CLI & npm
+# This is an Angular8 Seed App: ATS-seed app, created from scratch using CLI & npm
 
 ■ Setup a default seed project or use CLI:
 
