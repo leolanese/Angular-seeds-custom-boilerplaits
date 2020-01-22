@@ -72,7 +72,7 @@
     "@storybook/addon-notes": "^4.1.13",
     "@storybook/addon-storysource": "^4.1.13",
     "@storybook/addons": "^4.1.13",
-    "@storybook/angular": "^4.1.13",
+    "@storybook/angular": "^5.1.1",
     "angular-polyfills": "*",
     "bootstrap": "^4.3.1",
     "core-js": "^3.3.6",
