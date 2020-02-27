@@ -79,7 +79,7 @@ import { StoreModule } from '@ngrx/store';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    StoreModule.forRoot({}, {  }),
+    StoreModule.forRoot({}, {}),
     RouterModule.forRoot(routes, { useHash: true }),
     MatTableModule,
     StoreRouterConnectingModule.forRoot(),
@@ -88,7 +88,6 @@ import { StoreModule } from '@ngrx/store';
       maxAge: 25,
       logOnly: true,
       features: {
-        trace: true,
         pause: true, // start/pause recording of dispatched actions
         lock: true, // lock/unlock dispatching actions and side effects
         persist: true, // persist states on page reloading
@@ -99,7 +98,7 @@ import { StoreModule } from '@ngrx/store';
         reorder: true, // drag and drop actions in the history list
         dispatch: true, // dispatch custom actions or action creators
         test: true // generate testmos for the selected actions
-      },
+      }
     })
   ],
   providers: [environment.ENV_PROVIDERS, APP_PROVIDERS, PictureService],
