@@ -103,24 +103,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ---
+### :100: <i>Thanks!</i>
 
-<h5> { 'Leo Lanese',<br>
-       'Building Inspiring Responsive Reactive Solutions',<br>
-       'London, UK' }<br>
-</h5>
-<h5>Portfolio
-<a href="http://www.leolanese.com" target="_blank">http://www.leolanese.com</a>
-</h5>
-<h5>Twitter:
-<a href="http://twitter.com/LeoLaneseltd" target="_blank">twitter.com/LeoLaneseltd</a>
-</h5>
-<h5>Questions / Suggestion / Recommendation ?
-<a href="mail:to">developer@leolanese.com</a>
-</h5>
-<h5>DEV.to:
-<a href="http://www.dev.to/leolanese" target="_blank">www.dev.to/leolanese</a>
-</h5>
-<h5>Blog:
-<a href="http://www.leolanese.com/blog" target="_blank">leolanese.com/blog</a>
-</h5>
+> { I'm `Leo Lanese`,<br>
+   'Building Inspiring Responsive `Reactive Solutions`',<br>
+   '`London, UK`' }<br>
+
+##### :radio_button: Twitter: <a href="https://twitter.com/LeoLaneseltd" target="_blank">@LeoLaneseltd</a>
+##### :radio_button: Portfolio: <a href="https://www.leolanese.com" target="_blank">www.leolanese.com</a>
+##### :radio_button: DEV.to: <a href="https://www.dev.to/leolanese" target="_blank">dev.to/leolanese</a>
+##### :radio_button: Blog: <a href="https://www.leolanese.com/blog" target="_blank">leolanese.com/blog</a>
+##### :radio_button: Questions / Suggestion / Recommendation: developer@leolanese.com
 
